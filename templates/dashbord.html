@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-3">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#/">Home</a></li>
+      <li><a href="#/">Profile</a></li>
+      <li><a href="#/">Logout</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+    <h1>Dashbord</h1>
+    <ol class="breadcrumb">
+      <li><a href="#/">Home</a></li>
+      <li class="active">User list</a></li>
+    </ol>
+    <div class="panel panel-default">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Birthday</th>
+            <th>City</th>
+            <th>Active</th>
+            <th>Boss</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="p in profiles">
+            <td>{{ p.id }}</td>
+            <td><a ng-href="#/{{ $index + 1 }}">{{ p.name }}</a></td>
+            <td>{{ p.birthDate }}</td>
+            <td>{{ p.city }}</td>
+            <td><input type="checkbox" name="name"></td>
+            <td><input type="radio" name="name"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
